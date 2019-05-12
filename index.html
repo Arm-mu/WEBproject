@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>WEBproject</title>
+  <title>Index</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,28 +13,53 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body>
 
-  <form class="form-login">
+  <nav class="navbar navbar-dark bg-dark">
 
-    <div class="card-text-center">
-      <h1 class="card-header">Welcome !</h1>
+    <a class="navbar-brand text-primary font-weight-bold" href="#" onclick="alert('Please login first !');">SPACEFOX</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="#" onclick="alert('Please login first !');">Dashboard</a>
+        </li>
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="#" onclick="alert('Please login first !');">Customer</a>
+        </li>
+        <li class="nav-item font-weight-bold">
+          <a class="nav-link" href="#" onclick="alert('Please login first !');">About</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="container-content">
+    <div class="card text-white bg-dark mb-3 text-center">
       <div class="card-body">
 
+        <h2 class="font-weight-bold text-primary">Welcome !</h2><br>
+
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required
-          autofocus>
+        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address..."
+          required autofocus>
+        <br>
 
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password"
-          required>
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="login()">Login</button>
+          required><br>
+        <button class="btn btn-lg btn-primary font-weight-bold" type="button" onclick="login()">LOGIN</button>
       </div>
     </div>
-  </form>
 
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -53,7 +78,6 @@
       var $password = $('#inputPassword').val();
       if ($email == ('admin@nw.com') && $password == ('12345**')) {
         console.log('access');
-        alert('Access complete');
         window.location.replace('dashboard.html');
       } else {
         alert('Incorrect email or password ! Please try again');

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Edit Customer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+
+        <a class="navbar-brand text-primary font-weight-bold" href="dashboard.html">SPACEFOX</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link" href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link" href="index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <div class="container d-flex justify-content-center" style="width: 21.5em;margin:0 auto; margin-top: 20%">
+        <form id="mainform" action="customer.html" novalidate>
+            <div class="card border-info bg-dark my-2 mx-3 text-white" style="max-width: width 18rem;">
+                <h3 class="card-header text-center font-weight-bold text-primary">EDIT</h3>
+                <div class="card-body">
+
+                    <label for="idvalidate"></label>
+                    <input type="text" class="form-control" id="idvalidate" placeholder="ID" required
+                        pattern="[A-Z]{5}">
+                    <div class="invalid-feedback">
+                        Please use the ID pattern such like. "AAAAA"
+                    </div>
+
+                    <label for="namevalidate"></label>
+                    <input type="text" class="form-control" id="namevalidate" placeholder="Name" required
+                        pattern="^[\p{L}]+">
+                    <div class="invalid-feedback">
+                        Please type your name.
+                    </div>
+
+                    <label for="contvalidate"></label>
+                    <input type="text" class="form-control" id="contvalidate" placeholder="Contact" required
+                        pattern="^[\p{L}]+">
+                    <div class="invalid-feedback">
+                        Please type your contact.
+                    </div>
+
+                    <label for="addvalidate"></label>
+                    <input type="text" class="form-control" id="addvalidate" placeholder="Address" required
+                        pattern="^[\p{L}]0-9]+">
+                    <div class="invalid-feedback">
+                        Please type your address.
+                    </div>
+
+                    <div class="btn d-flex justify-content-center" style="margin-top: 20%">
+                        <button class="btn btn-primary font-weight-bold" type="submit">SUBMIT</button>
+                    </div>
+
+                </div>
+        </form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        $(function () {
+            $('#mainform').submit(function (event) {
+                var form = $('#mainform')[0];
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                }
+                $(this).addClass('was-validated');
+            })
+        });
+    </script>
+</body>
+
+</html>
